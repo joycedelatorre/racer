@@ -13,8 +13,21 @@
 
 .banner{
 	text-align:center;
-	font-size:100px;
+	font-size:150px;
 	text-align: center;
 	font-family: 'Faster One', cursive;
+	color:red;
 
+}
+.black{
+	color:black;
+}
+.road1{
+	border-top:10px solid grey;
+	border-bottom: 5px dashed white;
+
+}
+td{
+	background-color:rgb(192,192,192);
+	height:80px;
 }
