@@ -4,14 +4,14 @@ $(document).ready(function() {
   var end_of_track = 15;
   var player =[
   {
-    id:1,
+    id:0,
     position:0,
     keycode:'KeyP',
     location:'0'
   },
 
   {
-    id:2,
+    id:1,
     position:0,
     keycode:'KeyQ',
     location:'16'
@@ -19,12 +19,10 @@ $(document).ready(function() {
   }
 ];
 
-
   document.addEventListener('keydown', function(event){
     if (event.code == 'KeyP' && player[0].position < end_of_track ){
       console.log('jeo');
       remove_player(player[0].location);
-      // console.log(player[0].location);
 
       var numId = parseInt(player[0].location);
       numId = numId + 1;
@@ -48,7 +46,7 @@ function advance_player(player_new_loc){
 //       player[0].location = numId;
 
   $("#" + player_new_loc).addClass('active');
-  
+
 }
 
 function winner(player, num) {
