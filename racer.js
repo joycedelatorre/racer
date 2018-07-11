@@ -34,13 +34,13 @@ $(document).ready(function() {
 
 function remove_player(player_loc) {
   console.log(player_loc);
-  $("#"+ player_loc).removeClass('active');
+  $("#"+ player_loc).removeClass('active1');
   console.log(document.getElementById("0"));
 }
 
 function advance_player(player_new_loc, player){
   console.log("new location " + player_new_loc);
-  $("#" + player_new_loc).addClass('active');
+  $("#" + player_new_loc).addClass('active1');
   player.position = player.position + 1;
   console.log("Player position " + player.position);
   winner(player.position, player);

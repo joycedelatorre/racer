@@ -1,55 +1,74 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>racing boxes</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="racer.js"></script>
-    <link rel="stylesheet" href="racer.css" type="text/css" />
-  </head>
+<head>
+	<title>JS Racer</title>
+		<!-- My own css -->
+		<link   rel ="stylesheet" href="racer.css" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
 
-  <body>
-    <h1>Racing Boxes</h1>
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 
-    <div class="description">
-    This is a little game created with Javascript and HTML. Play by pressing the keys "P" or "Q" as quickly as you can across the finish line. Player One is "P". Player Two is "Q".
-    </div>
 
-    <table class="racer_table">
-      <tr>
-        <td id ='0' class="active"></td>
-        <td id ='1'></td>
-        <td id ='2'></td>
-        <td id ='3'></td>
-        <td id ='4'></td>
-        <td id ='5'></td>
-        <td id ='6'></td>
-        <td id ='7'></td>
-        <td id ='8'></td>
-        <td id ='9'></td>
-        <td id ='10'></td>
-        <td id ='11'></td>
-        <td id ='12'></td>
-        <td id ='13'></td>
-        <td id ='14'></td>
-        <td id ='15'>FINISH</td>
-      </tr>
-      <tr>
-        <td id ='16' class="active"></td>
-        <td id ='17'></td>
-        <td id ='18'></td>
-        <td id ='19'></td>
-        <td id ='20'></td>
-        <td id ='21'></td>
-        <td id ='22'></td>
-        <td id ='23'></td>
-        <td id ='24'></td>
-        <td id ='25'></td>
-        <td id ='26'></td>
-        <td id ='27'></td>
-        <td id ='28'></td>
-        <td id ='29'></td>
-        <td id ='30'> FINISH</td>
-      </tr>
-    </table>
-  </body>
+		<!-- Javascript/ jquery -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script  type="text/javascript" src="racer.js"></script>
+	
+</head>
+	<body>
+		<div class="cont">
+			<div class="row top"> 
+				<div class="col banner" > 
+					J<span class="black">ava</span>S<span class="black">cript</span> R<span class="black">acer</span>
+				</div>
+			</div>
+
+			<div class="row">
+				<table class="racer_table">
+				  <tbody>
+				    <tr class="road1">
+				    	<td id ='0' class="active1"></td>
+			        <td id ='1'></td>
+			        <td id ='2'></td>
+			        <td id ='3'></td>
+			        <td id ='4'></td>
+			        <td id ='5'></td>
+			        <td id ='6'></td>
+			        <td id ='7'></td>
+			        <td id ='8'></td>
+			        <td id ='9'></td>
+			        <td id ='10'></td>
+			        <td id ='11'></td>
+			        <td id ='12'></td>
+			        <td id ='13'></td>
+			        <td id ='14'>FINISH</td>
+			        <td id ='15'></td>
+				    </tr>
+				    <tr class="road2">
+				    	<td id ='16' class="active2"></td>
+			        <td id ='17'></td>
+			        <td id ='18'></td>
+			        <td id ='19'></td>
+			        <td id ='20'></td>
+			        <td id ='21'></td>
+			        <td id ='22'></td>
+			        <td id ='23'></td>
+			        <td id ='24'></td>
+			        <td id ='25'></td>
+			        <td id ='26'></td>
+			        <td id ='27'></td>
+			        <td id ='28'></td>
+			        <td id ='29'></td>
+			        <td id ='30'>FINISH</td>
+			        <td id ='31'></td>
+				    </tr>
+				  </tbody>
+				</table>
+			</div>
+
+		</div>
+	</body>
 </html>
