@@ -1,17 +1,16 @@
 $(document).ready(function() {
 
-
   var end_of_track = 15;
   var player =[
   {
-    id:0,
+    id:1,
     position:0,
     keycode:'KeyP',
     location:'0'
   },
 
   {
-    id:1,
+    id:2,
     position:0,
     keycode:'KeyQ',
     location:'16'
@@ -28,29 +27,27 @@ $(document).ready(function() {
       numId = numId + 1;
       player[0].location = numId;
       console.log("---> " + player[0].location);
-      advance_player(player[0].location);
+      advance_player(player[0].location, player[0]);
     }
   });
 });
 
 function remove_player(player_loc) {
   console.log(player_loc);
- $("#"+ player_loc).removeClass('active');
- console.log(document.getElementById("0"));
+  $("#"+ player_loc).removeClass('active');
+  console.log(document.getElementById("0"));
 }
 
-function advance_player(player_new_loc){
+function advance_player(player_new_loc, player){
   console.log("new location " + player_new_loc);
-//   var numId = parseInt(player_loc.location);
-//       numId = numId + 1;
-//       player[0].location = numId;
-
   $("#" + player_new_loc).addClass('active');
-
+  player.position = player.position + 1;
+  console.log("Player position " + player.position);
+  winner(player.position, player);
 }
 
-function winner(player, num) {
-  if (player > 14) {
-    alert("Player " + num + " has won!");
+function winner(player_pos, player) {
+  if (player_pos > 14) {
+    alert("Player " + player.id + " has won!");
   }
  }
