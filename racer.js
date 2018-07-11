@@ -7,7 +7,7 @@ $(document).ready(function() {
     id:1,
     position:0,
     keycode:'KeyP',
-    location:'00'
+    location:'0'
   },
 
   {
@@ -24,12 +24,12 @@ $(document).ready(function() {
     if (event.code == 'KeyP' && player[0].position < end_of_track ){
       console.log('jeo');
       remove_player(player[0].location);
-      console.log(player[0].location);
+      // console.log(player[0].location);
 
       var numId = parseInt(player[0].location);
       numId = numId + 1;
       player[0].location = numId;
-      // console.log("---> " + player[0].location);
+      console.log("---> " + player[0].location);
       advance_player(player[0].location);
     }
   });
@@ -38,11 +38,17 @@ $(document).ready(function() {
 function remove_player(player_loc) {
   console.log(player_loc);
  $("#"+ player_loc).removeClass('active');
+ console.log(document.getElementById("0"));
 }
 
 function advance_player(player_new_loc){
   console.log("new location " + player_new_loc);
+//   var numId = parseInt(player_loc.location);
+//       numId = numId + 1;
+//       player[0].location = numId;
+
   $("#" + player_new_loc).addClass('active');
+  
 }
 
 function winner(player, num) {
