@@ -1,41 +1,48 @@
-
-  var end_of_track = 15;
-  var players =[
-	{
-		id:1,
-		position:0,
-		keycode:80,
-		location:'player1'
-	},
-
-	{
-		id:2,
-		position:0,
-		keycode:81,
-		location:'player2'
-
-	}
-]
 $(document).ready(function() {
 
-  $(document).keypress(function(event) {
-    advancePlayer(event.keyCode);
+
+  var end_of_track = 15;
+  var player =[
+  {
+    id:1,
+    position:0,
+    keycode:'KeyP',
+    location:'00'
+  },
+
+  {
+    id:2,
+    position:0,
+    keycode:'KeyQ',
+    location:'16'
+
+  }
+];
+
+
+  document.addEventListener('keydown', function(event){
+    if (event.code == 'KeyP' && player[0].position < end_of_track ){
+      console.log('jeo');
+      remove_player(player[0].location);
+      console.log(player[0].location);
+
+      var numId = parseInt(player[0].location);
+      numId = numId + 1;
+      player[0].location = numId;
+      // console.log("---> " + player[0].location);
+      advance_player(player[0].location);
+    }
   });
 });
 
-function advancePlayer(keyCode) {
-		console.log("hello");
-  	for(var i = 0; i < players.length; i++){
-  		if (keyCode == players[i].keycode && players[0].position < end_of_track && players[1].position < end_of_track) {
-        move_player(players.location);
-        players.position++;
-        winner(players.position, players.id);
-      }
-  	}
- }
+function remove_player(player_loc) {
+  console.log(player_loc);
+ $("#"+ player_loc).removeClass('active');
+}
 
-function move_player(strip) {
-  $(strip).find('td.active').removeClass('active').next().addClass('active');
+function advance_player(player_new_loc){
+  console.log("new location " + player_new_loc);
+  $("#" + player_new_loc).addClass('active');
 }
 
 function winner(player, num) {
