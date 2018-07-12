@@ -45,13 +45,15 @@
   background-image: url("images/yellowRacer.png");
   background-position: center center;
   background-repeat: no-repeat;
-  width:"100%"; height:"100%";
+  width:"100%"; 
+  height:"100%";
 }
 
 .racer_table td.active2 {
   background-image: url("images/blueRacer.png");
   background-position: center center;
   background-repeat: no-repeat;
-  width:"100%"; height:"100%";
+  width:"100%"; 
+  height:"100%";
 }
 
