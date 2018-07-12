@@ -3,12 +3,13 @@ $(document).ready(function() {
   var end_of_track = 15;
   var player =
   [{
+    id:0,
     position:0,
     keycode:'KeyP',
     location:'0'
   },
 
-  {
+  { id:1,
     position:0,
     keycode:'KeyQ',
     location:'16'
