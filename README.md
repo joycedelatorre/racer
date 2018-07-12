@@ -1,2 +1,2 @@
 # racer
-![Preview](https://gph.is/2zB1JXM)
+![Preview](https://gph.is/2zB1JXM "jsRacer")
