@@ -1,2 +1,2 @@
 # racer
-![Preview](https://gph.is/2zB1JXM "jsRacer")
+![Preview](https://media.giphy.com/media/40a4VWZ3ss324hNrHN/giphy.gif "jsRacer")
